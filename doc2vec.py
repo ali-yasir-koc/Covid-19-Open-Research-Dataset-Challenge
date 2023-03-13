@@ -3,16 +3,10 @@ import numpy
 import gensim
 import re
 import os
-import functions as f
-
 from sklearn.neighbors import NearestNeighbors
 from scipy.spatial import distance
 
-f.display()
-os.getcwd()
-path="C:\\Users\\hseym\\OneDrive\\Masaüstü\\Yeni klasör\\sample data and codes\\covid-resarch"
-os.chdir(path)
-
+""" functions"""
 def read_corpus(df, column):
     for i, line in enumerate(df[column]):
         tokens = gensim.parsing.preprocess_string(line)
